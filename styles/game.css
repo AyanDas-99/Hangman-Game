@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+:root {
+  --primary-bg: rgb(26, 14, 43);
+  --logo-ff: "Monoton", cursive;
+  --primary-ff: "sans-serif";
+  --btn-fs: 15px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--primary-bg);
+  color: white;
+}
+
+.hero {
+  font-family: var(--logo-ff);
+  font-size: 2rem;
+  text-align: center;
+  padding: 0.3em;
+}
+
+.game-view img {
+  width: 70%;
+  margin: 0 auto;
+  display: block;
+  border-radius: 20px;
+}
+.game-view .task {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 1em auto 0.3em;
+  font-size: 2rem;
+  letter-spacing: 15px;
+  font-weight: bolder;
+}
+
+.letters {
+  display: flex;
+  gap: 0.8em;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1em;
+}
+.letters .letter {
+  display: block;
+  font-size: 1.3rem;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 8px;
+  font-family: sans-serif;
+}
+.letters .letter:hover {
+  background-color: magenta;
+  cursor: pointer;
+}
+
+.retry {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  cursor: pointer;
+}/*# sourceMappingURL=game.css.map */
