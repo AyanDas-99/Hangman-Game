@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+:root {
+  --primary-bg: rgb(26, 14, 43);
+  --logo-ff: "Monoton", cursive;
+  --primary-ff: "sans-serif";
+  --btn-fs: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--primary-bg);
+  color: white;
+}
+
+@-webkit-keyframes load {
+  from {
+    margin-top: -1em;
+  }
+  to {
+    margin-top: 30vh;
+  }
+}
+
+@keyframes load {
+  from {
+    margin-top: -1em;
+  }
+  to {
+    margin-top: 30vh;
+  }
+}
+.hero {
+  font-family: var(--logo-ff);
+  font-size: 3rem;
+  width: 100%;
+  text-align: center;
+  -webkit-animation-name: load;
+          animation-name: load;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  margin-top: 30vh;
+  letter-spacing: 10px;
+}
+
+@-webkit-keyframes appear {
+  from {
+    opacity: 0%;
+    margin: 10em auto;
+  }
+  to {
+    opacity: 100%;
+    margin: 1em auto;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0%;
+    margin: 10em auto;
+  }
+  to {
+    opacity: 100%;
+    margin: 1em auto;
+  }
+}
+.gameon {
+  color: white;
+  padding: 1em;
+  background-color: transparent;
+  outline: none;
+  border: 2px solid white;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: var(--btn-fs);
+  border-radius: 40px;
+  margin: 1em auto;
+  display: block;
+  -webkit-animation-name: appear;
+          animation-name: appear;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.gameon:hover {
+  border: 3px solid white;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero {
+    font-size: 6rem;
+  }
+  .gameon {
+    font-size: 1.5rem;
+  }
+}/*# sourceMappingURL=home.css.map */
