@@ -24,7 +24,7 @@ body {
 }
 
 .game-view img {
-  width: 70%;
+  width: 350px;
   margin: 0 auto;
   display: block;
   border-radius: 20px;
@@ -45,10 +45,12 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   padding: 1em;
+  max-width: 600px;
+  margin: auto;
 }
 .letters .letter {
   display: block;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   border: 1px solid white;
   padding: 10px;
   border-radius: 8px;
@@ -65,4 +67,28 @@ body {
   width: fit-content;
   margin: 0 auto;
   cursor: pointer;
+}
+
+.hint-div {
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+@media only screen and (min-width: 900px) {
+  .game-view {
+    display: flex;
+    align-items: center;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    gap: 5em;
+    margin: 0 auto 1em;
+  }
+  .game-view img {
+    width: 400px;
+  }
+  .letter {
+    width: 2rem;
+    text-align: center;
+  }
 }/*# sourceMappingURL=game.css.map */
