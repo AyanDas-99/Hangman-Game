@@ -8,6 +8,7 @@ let word, tries = 6;
 
 // Presetup
 const Presetup = () => {
+    // document.querySelector('.game-view').style.display = 'none';
     letters.innerHTML = ''
     for (i = 97; i < 123; i++) {
         const span = document.createElement('span');
@@ -30,6 +31,8 @@ async function getWord() {
         response = await response;
         console.log(response)
         setText(response[0].word, response[0].definition)
+        const loadingAnimation = document.querySelector('.loading');
+        loadingAnimation.style.display = 'none'
     }
     catch (error) {
         window.navigation.navigate('error.html');
@@ -90,10 +93,7 @@ reloadBtn.addEventListener('click', () => {
     window.navigation.reload();
 })
 
-// Sound effects
 // load animation
-
-// sound functions
 
 function playSound(path) {
     const sound = new Audio(path);
