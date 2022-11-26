@@ -21,11 +21,16 @@ let word;
 })();
 
 async function getWord() {
-    p = new Promise((resolve, reject) => {
-        setTimeout(() => { resolve("A word that has some meanings to it") }, 1000)
-    })
-    const response = await p;
-    setText('welcome', response)
+    try {
+        const p = fetch('https://random-words-api.vercel.app/word');
+        let response = (await p).json();
+        response = await response;
+        console.log(response)
+        setText(response[0].word, response[0].definition)
+    }
+    catch(error) {
+        console.log(error+' There is an error')
+    }
 }
 
 function setText(text, meaning) {
@@ -49,6 +54,7 @@ function checkValue(e) {
             found = true;
         }
     }
-    if(!found) e.target.style.backgroundColor = 'red'
+    if (!found) e.target.style.backgroundColor = 'red'
     result.textContent = a.join("");
 }
+
